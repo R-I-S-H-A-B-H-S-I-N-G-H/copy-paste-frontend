@@ -9,9 +9,7 @@
 .share-wrapper > textarea {
 	width: 80%;
 	min-height: 70%;
-	text-align: center;
-	text-justify: auto;
-	text-justify: distribute;
+	text-align: justify;
 	border-radius: 0.2rem;
 }
 .share-wrapper > .share-btn {
