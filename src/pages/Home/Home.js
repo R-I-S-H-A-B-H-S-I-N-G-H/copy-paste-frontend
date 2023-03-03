@@ -12,7 +12,7 @@ function Home(props) {
 		res = res.result;
 		if (res == null) return [];
 		// res = res.map((ele) => ele.data);
-		console.log(res);
+		// console.log(res);
 		return res;
 	}
 
@@ -27,12 +27,17 @@ function Home(props) {
 	// }
 
 	useEffect(() => {
-		let interval = setInterval(() => {
-			getCopyData(10).then((res) => {
-				// console.log(res);
-				setcopydata(res);
-			});
-		}, 100);
+		let interval;
+		try {
+			interval = setInterval(() => {
+				getCopyData(10).then((res) => {
+					// console.log(res);
+					setcopydata(res);
+				});
+			}, 10);
+		} catch (error) {
+			clearInterval(interval);
+		}
 		return () => {
 			clearInterval(interval);
 		};
