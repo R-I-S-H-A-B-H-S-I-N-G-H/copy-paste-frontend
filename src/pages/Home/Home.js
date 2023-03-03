@@ -34,7 +34,7 @@ function Home(props) {
 					// console.log(res);
 					setcopydata(res);
 				});
-			}, 10);
+			}, 1000);
 		} catch (error) {
 			clearInterval(interval);
 		}
