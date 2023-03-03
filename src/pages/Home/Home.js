@@ -32,7 +32,7 @@ function Home(props) {
 				// console.log(res);
 				setcopydata(res);
 			});
-		}, 2000);
+		}, 100);
 		return () => {
 			clearInterval(interval);
 		};
