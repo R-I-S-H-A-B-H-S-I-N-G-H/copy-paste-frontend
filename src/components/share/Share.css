@@ -1,0 +1,23 @@
+.share-wrapper {
+	display: flex;
+	flex-direction: column;
+	padding: 0.5rem;
+	height: 30dvh;
+	align-items: center;
+	justify-content: center;
+}
+.share-wrapper > textarea {
+	width: 80%;
+	min-height: 70%;
+	text-align: center;
+	text-justify: auto;
+	text-justify: distribute;
+	border-radius: 0.2rem;
+}
+.share-wrapper > .share-btn {
+	background-color: lightgreen;
+	border: solid 0.1rem rgb(4, 151, 4);
+	padding: 0.3rem 1.5rem;
+	border-radius: 0.2rem;
+	margin: 0.2rem;
+}
