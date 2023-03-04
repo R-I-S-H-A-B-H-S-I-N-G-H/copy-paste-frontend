@@ -34,13 +34,19 @@ function Home(props) {
 					// console.log(res);
 					setcopydata(res);
 				});
-			}, 1000);
+			}, 600);
 		} catch (error) {
 			clearInterval(interval);
 		}
 		return () => {
 			clearInterval(interval);
 		};
+	}, []);
+
+	useEffect(() => {
+		getCopyData(10).then((res) => {
+			setcopydata(res);
+		});
 	}, []);
 	return (
 		<div className="home-wrapper">
